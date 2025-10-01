@@ -1,0 +1,153 @@
+/* --- Base Styles --- */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.note {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* --- Form --- */
+form#fuelForm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form#fuelForm input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form#fuelForm button {
+  grid-column: span 2;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+form#fuelForm button:hover {
+  background: #0056b3;
+}
+
+/* --- Summary --- */
+.summary {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.summary h2 {
+  margin-top: 0;
+}
+
+.summary p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+/* --- Table --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  font-size: 14px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+.edit-btn, .delete-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.edit-btn {
+  background: #ffc107;
+  color: #333;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  form#fuelForm {
+    grid-template-columns: 1fr;
+  }
+
+  form#fuelForm button {
+    grid-column: span 1;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  form#fuelForm input, form#fuelForm button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  .summary p {
+    font-size: 13px;
+  }
+}
