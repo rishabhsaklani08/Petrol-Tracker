@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🚗 Petrol Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🚗 Petrol Expense Tracker</h1>
+
+  <!-- Input Form -->
+  <form id="fuelForm">
+    <input type="date" id="date" required>
+    <input type="number" id="liters" step="0.01" placeholder="Liters (added to fill tank)" required>
+    <input type="number" id="amount" step="0.01" placeholder="Amount (₹)" required>
+    <input type="number" id="rate" step="0.01" placeholder="Petrol Rate (₹/L)" required>
+    <input type="number" id="meter" placeholder="Odometer (km)" required>
+    <button type="submit" id="saveBtn">Add Entry</button>
+  </form>
+
+  <!-- Monthly Summary -->
+  <div class="summary" id="summary">
+    <h2>📊 Monthly Summary</h2>
+    <p><b>Month:</b> <span id="summaryMonth"></span></p>
+    <p><b>Total Petrol Cost:</b> ₹<span id="totalCost">0</span></p>
+    <p><b>Total Liters:</b> <span id="totalLiters">0</span> L</p>
+    <p><b>Average Mileage:</b> <span id="avgMileage">-</span> km/L</p>
+    <p><b>Average Running Cost:</b> ₹<span id="avgCost">-</span> /km</p>
+  </div>
+
+  <!-- Data Table -->
+  <table id="fuelTable">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Liters (added)</th>
+        <th>Amount (₹)</th>
+        <th>Rate (₹/L)</th>
+        <th>Odometer</th>
+        <th>Mileage (km/L)</th>
+        <th>Cost (₹/km)</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
